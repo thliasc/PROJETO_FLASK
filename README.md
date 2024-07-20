@@ -4,7 +4,7 @@ Catálogo de Livros em Flask
 ## Funcionalidades:
 ### livros --
   [✅] Adicionar Livros
-  [❌] Salvar Livros (Database)
+  [❌] Salvar registros (Database)
   [❌] Remover Livros
   [❌] Atualizar Livro(s)
   [❌] Excluir Livros
