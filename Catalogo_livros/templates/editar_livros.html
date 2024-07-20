@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Catálogo De Livros</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo.png') }}">
+        <link href="https://fonts.cdnfonts.com/css/museo" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="item"><a href="{{ url_for('paginaInicial')}}">Página Inicial</a></div>
+            <div class="item"><a href="{{ url_for('dashboard')}}">Dashboard</a></div> <!--Administração-->
+            <div class="item"><a href="{{ url_for('logout')}}">Sair</a></div>
+        </div>
+    </header> 
+        <h2>Adicione um livro ao gênero "{{ parGenero }}"</h2>
+        <form method="post" enctype="multipart/form-data" action="{{ url_for('addLivro')}}">
+            <div class="formulario-add-remove">
+                <label for="genero">Gênero: </label><input type="text" name="genero" value="{{ parGenero }}" readonly><br/>
+                <label for="titulo">Título: </label><input type="text" name="titulo" id="titulo" placeholder="Inserir Título" required/><br/>
+                <p></p>
+                <label for="Imagem">Imagem: </label><input type='file' name='imagem'/><br/>
+                <label for="preco">Preço: <label><Input type='text' name='preco' id='preco' placeholder='Inserir o preço do livro' required/><br/>
+                <input type='submit' id='postar' value='Adicionar'>
+            </div>
+            </form> 
+        </form>
+    </div>
+</body>
+</html>
